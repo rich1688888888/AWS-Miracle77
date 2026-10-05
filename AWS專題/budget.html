@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>預算經費評估 - 奇蹟77</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <div class="sidebar">
+        <div class="logo">
+            <h2>奇蹟77</h2>
+            <p>AWS 專題展示</p>
+        </div>
+        <a href="index.html">🏠 專案首頁 (Portal)</a>
+        <a href="map.html">📍 科技執法地圖</a>
+        <a href="analytics.html">📊 開單熱區分析</a>
+        <a href="architecture.html">⚙️ AWS 架構說明</a>
+        <a href="poc.html">🧪 POC 概念驗證</a>
+        <a href="budget.html" class="active">💰 預算經費評估</a>
+        <a href="log.html">📝 專題工作紀錄</a>
+    </div>
+
+    <div class="main-content">
+        <div class="header-top">
+            <h1>💰 專案預算與經費評估 (AWS Free Tier)</h1>
+        </div>
+
+        <div class="card" style="margin-top: 20px;">
+            <p style="color: #666; margin-bottom: 15px;">本專題全面採用 Serverless 架構，極大化利用 AWS 免費層 (Free Tier) 優惠，嚴格控管於 $50 美金預算內。</p>
+            <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                <thead>
+                    <tr style="background: #f1f3f5; border-bottom: 2px solid #ddd;">
+                        <th style="padding: 12px; color: #333;">AWS 服務項目</th>
+                        <th style="padding: 12px; color: #333;">專案預估用量 (每月)</th>
+                        <th style="padding: 12px; color: #333;">AWS 免費層優惠</th>
+                        <th style="padding: 12px; color: #333; text-align: right;">預估花費 (USD)</th>
+                    </tr>
+                </thead>
+                <tbody style="font-size: 0.95rem;">
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 12px; color: #002147;"><strong>Amazon S3</strong></td>
+                        <td style="padding: 12px; color: #666;">~50 MB (前端網頁與靜態圖資)</td>
+                        <td style="padding: 12px; color: #2b8a3e;">首年 5 GB 免費</td>
+                        <td style="padding: 12px; text-align: right; color: #d90429; font-weight: bold;">$0.00</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 12px; color: #002147;"><strong>API Gateway</strong></td>
+                        <td style="padding: 12px; color: #666;">約 5,000 次 API 呼叫</td>
+                        <td style="padding: 12px; color: #2b8a3e;">每月 100 萬次 API 呼叫免費</td>
+                        <td style="padding: 12px; text-align: right; color: #d90429; font-weight: bold;">$0.00</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 12px; color: #002147;"><strong>AWS Lambda</strong></td>
+                        <td style="padding: 12px; color: #666;">約 5,000 次觸發，每次 200ms</td>
+                        <td style="padding: 12px; color: #2b8a3e;">每月 100 萬次請求 & 40 萬 GB-秒 免費</td>
+                        <td style="padding: 12px; text-align: right; color: #d90429; font-weight: bold;">$0.00</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 12px; color: #002147;"><strong>Amazon DynamoDB</strong></td>
+                        <td style="padding: 12px; color: #666;">儲存全台數千筆資料 (< 100MB)</td>
+                        <td style="padding: 12px; color: #2b8a3e;">永久免費 25 GB，及充足讀寫容量</td>
+                        <td style="padding: 12px; text-align: right; color: #d90429; font-weight: bold;">$0.00</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 12px; color: #002147;"><strong>Amazon Location Service</strong></td>
+                        <td style="padding: 12px; color: #666;">約 1,000 次地圖渲染與地理圍欄檢測</td>
+                        <td style="padding: 12px; color: #2b8a3e;">前三個月免費 (適用於學期專題展示)</td>
+                        <td style="padding: 12px; text-align: right; color: #d90429; font-weight: bold;">$0.00</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr style="background: #fff3cd;">
+                        <td colspan="3" style="padding: 12px; text-align: right; font-weight: bold;">每月預估總花費：</td>
+                        <td style="padding: 12px; text-align: right; font-weight: bold; font-size: 1.1rem; color: #d90429;">$0.00</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+            <div class="grid-2" style="margin-top: 20px;">
+            <div class="card">
+                <h3>💡 雲端成本最佳化策略 (Cost Optimization)</h3>
+                <p style="color: #666; font-size: 0.95rem; margin-bottom: 10px;">為確保專題在擴展時也不會產生預期外的帳單，我們採取了以下架構設計：</p>
+                <ul style="line-height: 1.8; font-size: 0.95rem;">
+                    <li><strong>100% 無伺服器運算：</strong> 捨棄傳統需 24 小時開機計費的 EC2，改用 Lambda 按「執行毫秒數」與「請求次數」計費。無人使用時費用為絕對的 。</li>
+                    <li><strong>資料庫 On-Demand 模式：</strong> DynamoDB 不預先配建讀寫容量 (Provisioned)，改為隨需模式 (On-Demand)，完美契合學生專題「流量不穩定、間歇性展示」的特性。</li>
+                    <li><strong>CDN 邊緣快取阻絕流量：</strong> 靜態資源由 CloudFront 在全球邊緣節點攔截快取，大幅減少回源 (Origin Fetch) 至 S3 的流量費用。</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>📈 流量擴展與成本模擬 (Scalability Simulation)</h3>
+                <p style="color: #666; font-size: 0.95rem; margin-bottom: 10px;">假設專題公開後爆紅，超出免費層額度時的每月預估成本：</p>
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; border: 1px solid #ddd;">
+                    <strong style="color: #002147; display: block; margin-bottom: 5px;">🔥 情境：每月 10,000 名活躍使用者 (約 10 萬次 API 呼叫)</strong>
+                    <ul style="line-height: 1.6; font-size: 0.9rem; color: #555; list-style-type: none; padding-left: 0;">
+                        <li>• API Gateway (10萬次): <strong>~</div>
+</body>.35 USD</strong></li>
+                        <li>• Lambda Compute (10萬次): <strong>~</div>
+</body>.02 USD</strong></li>
+                        <li>• DynamoDB Reads (10萬次): <strong>~</div>
+</body>.03 USD</strong></li>
+                        <li>• S3 + CloudFront Data Transfer: <strong>~</div>
+</body>.10 USD</strong></li>
+                        <li style="margin-top: 10px; border-top: 1px dashed #ccc; padding-top: 10px; color: #d90429;"><strong>👉 萬人級別系統月結總花費：不到 $1.00 USD (約 NT$30)</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

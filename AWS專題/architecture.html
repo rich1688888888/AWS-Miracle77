@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>AWS ?嗆?隤芣? - 憟?77</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <div class="sidebar">
+        <div class="logo">
+            <h2>憟?77</h2>
+            <p>AWS 撠?撅內</p>
+        </div>
+        <a href="index.html">?? 撠?擐? (Portal)</a>
+        <a href="map.html">?? 蝘??瑟??啣?</a>
+        <a href="analytics.html">?? ??勗???</a>
+        <a href="architecture.html" class="active">?? AWS ?嗆?隤芣?</a>
+        <a href="poc.html">?妒 POC 璁艙撽?</a>
+        <a href="budget.html">? ??蝬祥閰摯</a>
+        <a href="log.html">?? 撠?撌乩?蝝??/a>
+    </div>
+
+    <div class="main-content">
+        <div class="header-top">
+            <h1>?? ?脩垢???嗆???銵敦蝭</h1>
+        </div>
+
+        <div class="card" style="margin-bottom: 20px;">
+            <h3>AWS ?脩垢?嗆??邪??(Architecture Diagram)</h3>
+            <div class="data-placeholder" style="height: 400px;">
+                <div>
+                    <span style="font-size: 30px;">?儭?/span>
+                    <h4>?瑽?靽????/h4>
+                    <p>?芯?撠甇方票銝蝙??draw.io ??Lucidchart 蝜芾ˊ????AWS 蝟餌絞?嗆???/p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <h3>敺垢??撅?(Compute & API)</h3>
+                <ul style="line-height: 1.8;">
+                    <li><strong>AWS Lambda:</strong> ???∠??? API 隢?嚗?憒閰ａ?餈葫??詻??楝蝺?撖衣 100% Serverless ???嚗???24 撠???隡箸??具?/li>
+                    <li><strong>Amazon API Gateway:</strong> 雿???蝡航?瘙??桐??亙嚗恣?????嗅?急活?貉? API 摰?扼?/li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>鞈??脣??征??蝞?(Database & Location)</h3>
+                <ul style="line-height: 1.8;">
+                    <li><strong>Amazon Location Service:</strong> ???啣????楝蝺???(Routing)嚗蒂餈質馱頠?雿蔭?臬?脣???甈?(Geofencing)?孛?潸郎?晞?/li>
+                    <li><strong>Amazon DynamoDB:</strong> NoSQL 鞈?摨恬??賣扔????啗???皜祇?貊?蝬楝摨佗?銝行?游撥憭抒??啁?蝛粹??亥岷 (Geo-query)??/li>
+                    <li><strong>Amazon S3:</strong> ?脣?敺郎?輻蔡銝???憪?CSV ?鞈????曄雯蝡???皞???/li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- POC Section -->
+        <div class="card" style="margin-top: 20px;">
+            <h3>?妒 POC (璁艙撽? Proof Of Concept)</h3>
+            <p style="color: #666; margin-bottom: 15px;">?箇Ⅱ靽?獢敹?銵??航??改???撌脤?撠??菜芋蝯脰?隞乩??挾??POC 撽?嚗?/p>
+            <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 250px; border: 1px solid #ddd; padding: 15px; border-radius: 8px; background: #f8f9fa;">
+                    <strong style="color: #002147;">??Step 1. S3 ??閮恣撽?</strong>
+                    <p style="font-size: 0.9rem; color: #555; margin-top: 5px;">??撠??垢憭??Ｙ雯蝡蝵脰 S3 Bucket 銝阡???Public Read嚗Ⅱ隤隡箸??函雯蝡?銵??Ｕ?/p>
+                </div>
+                <div style="flex: 1; min-width: 250px; border: 1px solid #ddd; padding: 15px; border-radius: 8px; background: #f8f9fa;">
+                    <strong style="color: #002147;">??Step 2. API Serverless ??葫閰?/strong>
+                    <p style="font-size: 0.9rem; color: #555; margin-top: 5px;">(?脰?銝? 皜祈岫 API Gateway 閫貊 Lambda嚗蒂??? Dummy JSON 鞈?蝯血?蝡臭??Ｕ?/p>
+                </div>
+                <div style="flex: 1; min-width: 250px; border: 1px solid #ddd; padding: 15px; border-radius: 8px; background: #f8f9fa;">
+                    <strong style="color: #002147;">??Step 3. DynamoDB 蝛粹??亥岷皜祈岫</strong>
+                    <p style="font-size: 0.9rem; color: #555; margin-top: 5px;">(?脰?銝? 撠?輸 CSV 鞈?皜?敺??DynamoDB嚗葫閰行神蝘?蝝?摨扳?瑼Ｙ揣?漲??/p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Budget Section -->
+        <div class="card" style="margin-top: 20px;">
+            <h3>? 撠?????鞎餉?隡?(AWS Free Tier)</h3>
+            <p style="color: #666; margin-bottom: 15px;">?砍?憿?Ｘ??Serverless ?嗆?嚗扔憭批??拍 AWS ?祥撅?(Free Tier) ?芣?嚗?潭蝞⊥ $50 蝢????扼?/p>
+            <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                <thead>
+                    <tr style="background: #f1f3f5; border-bottom: 2px solid #ddd;">
+                        <th style="padding: 12px; color: #333;">AWS ???</th>
+                        <th style="padding: 12px; color: #333;">撠??摯?券? (瘥?)</th>
+                        <th style="padding: 12px; color: #333;">AWS ?祥撅文??/th>
+                        <th style="padding: 12px; color: #333; text-align: right;">?摯?梯祥 (USD)</th>
+                    </tr>
+                </thead>
+                <tbody style="font-size: 0.95rem;">
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 12px; color: #002147;"><strong>Amazon S3</strong></td>
+                        <td style="padding: 12px; color: #666;">~50 MB (?垢蝬脤?????鞈?</td>
+                        <td style="padding: 12px; color: #2b8a3e;">擐僑 5 GB ?祥</td>
+                        <td style="padding: 12px; text-align: right; color: #d90429; font-weight: bold;">$0.00</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 12px; color: #002147;"><strong>API Gateway</strong></td>
+                        <td style="padding: 12px; color: #666;">蝝?5,000 甈?API ?澆</td>
+                        <td style="padding: 12px; color: #2b8a3e;">瘥? 100 ?祆活 API ?澆?祥</td>
+                        <td style="padding: 12px; text-align: right; color: #d90429; font-weight: bold;">$0.00</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 12px; color: #002147;"><strong>AWS Lambda</strong></td>
+                        <td style="padding: 12px; color: #666;">蝝?5,000 甈∟孛?潘?瘥活 200ms</td>
+                        <td style="padding: 12px; color: #2b8a3e;">瘥? 100 ?祆活隢? & 40 ??GB-蝘??祥</td>
+                        <td style="padding: 12px; text-align: right; color: #d90429; font-weight: bold;">$0.00</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 12px; color: #002147;"><strong>Amazon DynamoDB</strong></td>
+                        <td style="padding: 12px; color: #666;">?脣??典?詨?蝑???(< 100MB)</td>
+                        <td style="padding: 12px; color: #2b8a3e;">瘞訾??祥 25 GB嚗??雲霈撖怠捆??/td>
+                        <td style="padding: 12px; text-align: right; color: #d90429; font-weight: bold;">$0.00</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 12px; color: #002147;"><strong>Amazon Location Service</strong></td>
+                        <td style="padding: 12px; color: #666;">蝝?1,000 甈∪?葡???啁???瑼Ｘ葫</td>
+                        <td style="padding: 12px; color: #2b8a3e;">?????祥 (?拍?澆飛??憿?蝷?</td>
+                        <td style="padding: 12px; text-align: right; color: #d90429; font-weight: bold;">$0.00</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr style="background: #fff3cd;">
+                        <td colspan="3" style="padding: 12px; text-align: right; font-weight: bold;">瘥??摯蝮質鞎鳴?</td>
+                        <td style="padding: 12px; text-align: right; font-weight: bold; font-size: 1.1rem; color: #d90429;">$0.00</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+            <div class="card" style="margin-top: 20px;">
+            <h3>🔄 資料整合與流動管線 (Data Ingestion Pipeline)</h3>
+            <p style="color: #666; margin-bottom: 15px;">本系統不僅提供前端查詢，背後的資料更新機制亦遵循雲端自動化原則設計：</p>
+            
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+                <!-- Step A -->
+                <div style="display: flex; align-items: flex-start; gap: 15px; background: #f8f9fa; padding: 15px; border-radius: 8px; border-left: 4px solid #0073bb;">
+                    <div style="background: #0073bb; color: white; padding: 5px 12px; border-radius: 20px; font-weight: bold;">1</div>
+                    <div>
+                        <h4 style="margin: 0 0 5px 0; color: #002147;">政府開放資料獲取 (Open Data)</h4>
+                        <p style="margin: 0; font-size: 0.9rem; color: #555;">從內政部警政署資料平台下載「全台固定式測速照相」及「科技執法點位」最新 CSV 原始檔案。</p>
+                    </div>
+                </div>
+                
+                <!-- Step B -->
+                <div style="display: flex; align-items: flex-start; gap: 15px; background: #f8f9fa; padding: 15px; border-radius: 8px; border-left: 4px solid #ff9900;">
+                    <div style="background: #ff9900; color: white; padding: 5px 12px; border-radius: 20px; font-weight: bold;">2</div>
+                    <div>
+                        <h4 style="margin: 0 0 5px 0; color: #002147;">Python 資料清洗與轉換 (Data ETL)</h4>
+                        <p style="margin: 0; font-size: 0.9rem; color: #555;">利用本地端或 AWS Glue 腳本，過濾掉遺失經緯度之無效資料，並將地址轉換為標準的 GeoJSON 或 DynamoDB JSON 格式。</p>
+                    </div>
+                </div>
+
+                <!-- Step C -->
+                <div style="display: flex; align-items: flex-start; gap: 15px; background: #f8f9fa; padding: 15px; border-radius: 8px; border-left: 4px solid #2b8a3e;">
+                    <div style="background: #2b8a3e; color: white; padding: 5px 12px; border-radius: 20px; font-weight: bold;">3</div>
+                    <div>
+                        <h4 style="margin: 0 0 5px 0; color: #002147;">匯入 Amazon DynamoDB</h4>
+                        <p style="margin: 0; font-size: 0.9rem; color: #555;">透過 AWS CLI 或 Boto3 腳本進行批次寫入 (BatchWriteItem)，將清洗後的高品質座標點位寫入雲端資料庫，供前端應用程式隨時高速檢索。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

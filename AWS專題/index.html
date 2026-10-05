@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>奇蹟77 - 專案入口網站</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <div class="sidebar">
+        <div class="logo">
+            <h2>奇蹟77</h2>
+            <p>AWS 專題展示</p>
+        </div>
+        <a href="index.html" class="active">🏠 專案首頁 (Portal)</a>
+        <a href="map.html">📍 科技執法地圖</a>
+        <a href="analytics.html">📊 開單熱區分析</a>
+        <a href="architecture.html">⚙️ AWS 架構說明</a>
+        <a href="poc.html">🧪 POC 概念驗證</a>
+        <a href="budget.html">💰 預算經費評估</a>
+        <a href="log.html">📝 專題工作紀錄</a>
+    </div>
+
+    <div class="main-content">
+        <div class="header-top">
+            <h1>全台科技執法點位與測速查詢平台</h1>
+            <span class="team-badge">Team 奇蹟77</span>
+        </div>
+
+        <div class="grid-3">
+            <div class="card" style="background: linear-gradient(135deg, #002147, #003b7e); color: white;">
+                <h3 style="color: white; border-bottom-color: rgba(255,255,255,0.2);">💡 專題核心動機與市場差異</h3>
+                <p style="line-height: 1.8; margin-top: 10px;">市面上的「神盾」等測速 App 僅提供行車當下的單點語音警示，卻缺乏能讓民眾<b>「事前查詢、鳥瞰全台各縣市取締熱區」</b>的視覺化介面。我們利用 AWS 與警政署開放資料填補此市場空白，打造最直覺的執法地圖查詢平台。</p>
+            </div>
+            <div class="card" style="background: linear-gradient(135deg, #d90429, #ef233c); color: white;">
+                <h3 style="color: white; border-bottom-color: rgba(255,255,255,0.2);">🚀 核心功能預覽</h3>
+                <ul style="padding-left: 20px;">
+                    <li>全台各縣市科技執法與測速點位查詢</li>
+                    <li>多維度篩選（取締類型、特定路段）</li>
+                    <li>全台罰單熱區大數據視覺化儀表板</li>
+                    <li>（次要）GPS 接近預警功能</li>
+                </ul>
+            </div>
+            <div class="card" style="background: linear-gradient(135deg, #ffb703, #fb8500); color: white;">
+                <h3 style="color: white; border-bottom-color: rgba(255,255,255,0.2);">☁️ AWS 雲端賦能</h3>
+                <p>全面採用 Serverless 架構 (Lambda, API Gateway) 降低成本，並使用 Location Service 實現核心的「地理圍欄 (Geofencing)」追蹤技術。</p>
+            </div>
+        </div>
+
+        <!-- System Workflow -->
+        <div class="card" style="margin-bottom: 20px;">
+            <h3>🔄 系統即時運作流程</h3>
+            <div style="display: flex; justify-content: space-between; text-align: center; margin-top: 10px; padding: 10px 0;">
+                <div style="flex: 1; padding: 10px;">
+                    <div style="font-size: 2.5rem; margin-bottom: 10px;">📂</div>
+                    <h4 style="margin: 0 0 10px 0; color: #002147;">1. 資料自動同步</h4>
+                    <p style="font-size: 0.9rem; color: #666; margin: 0; line-height: 1.5;">Lambda 定期抓取警政署 CSV 開放資料，清洗後更新至 DynamoDB。</p>
+                </div>
+                <div style="font-size: 1.5rem; color: #ccc; display: flex; align-items: center;">▶</div>
+                <div style="flex: 1; padding: 10px;">
+                    <div style="font-size: 2.5rem; margin-bottom: 10px;">🔍</div>
+                    <h4 style="margin: 0 0 10px 0; color: #002147;">2. 多條件組合查詢</h4>
+                    <p style="font-size: 0.9rem; color: #666; margin: 0; line-height: 1.5;">使用者可依照縣市、行政區或取締項目（如違停、超速）發起查詢。</p>
+                </div>
+                <div style="font-size: 1.5rem; color: #ccc; display: flex; align-items: center;">▶</div>
+                <div style="flex: 1; padding: 10px;">
+                    <div style="font-size: 2.5rem; margin-bottom: 10px;">⚡</div>
+                    <h4 style="margin: 0 0 10px 0; color: #002147;">3. API 快速響應</h4>
+                    <p style="font-size: 0.9rem; color: #666; margin: 0; line-height: 1.5;">API Gateway 觸發 Lambda，從 DynamoDB 高速撈取匹配的點位座標。</p>
+                </div>
+                <div style="font-size: 1.5rem; color: #ccc; display: flex; align-items: center;">▶</div>
+                <div style="flex: 1; padding: 10px;">
+                    <div style="font-size: 2.5rem; margin-bottom: 10px;">🗺️</div>
+                    <h4 style="margin: 0 0 10px 0; color: #002147;">4. 地圖渲染與熱區</h4>
+                    <p style="font-size: 0.9rem; color: #666; margin: 0; line-height: 1.5;">透過 Amazon Location Service 將查詢結果以圖釘精準繪製於地圖上。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <h3>🎯 專案預期效益</h3>
+                <ul style="line-height: 1.8; color: #444; margin-bottom: 0;">
+                    <li><strong>資訊公開透明：</strong> 提供最易用、最直覺的查詢介面，讓民眾清楚了解各路口的執法規範。</li>
+                    <li><strong>提升行車安全意識：</strong> 透過事前查詢熱區，促使駕駛人在行經該路段時更加謹慎，減少違規與意外。</li>
+                    <li><strong>推動交通資料治理：</strong> 透過大數據分析，協助交通單位找出「標線設計不良」導致頻繁違規的真正痛點。</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>💡 為什麼選擇 AWS Serverless？</h3>
+                <ul style="line-height: 1.8; color: #444; margin-bottom: 0;">
+                    <li><strong>極低的維護成本：</strong> 充分利用 Lambda 與 API Gateway 的免費額度，不用 24 小時開啟伺服器燒錢。</li>
+                    <li><strong>高併發處理能力：</strong> 遇到連續假期車潮湧現時，系統能自動彈性擴展，保證服務不崩潰。</li>
+                    <li><strong>原生地理服務：</strong> Amazon Location Service 內建強大的 Geofence (地理圍欄) 引擎，比自行開發演算法更精準。</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>👥 團隊成員介紹</h3>
+            <div class="grid-2" style="grid-template-columns: repeat(4, 1fr);">
+                <div style="text-align: center; padding: 20px; background: #f8f9fa; border: 1px solid #ddd; border-radius: 8px;">
+                    <strong>組長 王保富</strong><br>112021058
+                </div>
+                <div style="text-align: center; padding: 20px; background: #f8f9fa; border: 1px solid #ddd; border-radius: 8px;">
+                    <strong>組員 何婕寧</strong><br>112021150
+                </div>
+                <div style="text-align: center; padding: 20px; background: #f8f9fa; border: 1px solid #ddd; border-radius: 8px;">
+                    <strong>組員 林加堤</strong><br>112021152
+                </div>
+                <div style="text-align: center; padding: 20px; background: #f8f9fa; border: 1px solid #ddd; border-radius: 8px;">
+                    <strong>組員 劉羽婕</strong><br>111021072
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

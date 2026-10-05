@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>專題工作紀錄 - 奇蹟77</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .timeline-item {
+            border-left: 4px solid #002147;
+            padding-left: 20px;
+            margin-bottom: 25px;
+            position: relative;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background: #ffb703;
+            border-radius: 50%;
+            left: -10px;
+            top: 5px;
+            border: 3px solid white;
+        }
+        .timeline-date {
+            font-weight: bold;
+            color: #d90429;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        .timeline-content {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+        .timeline-placeholder {
+            border-left: 4px dashed #adb5bd;
+            opacity: 0.6;
+        }
+        .timeline-placeholder::before {
+            background: #adb5bd;
+        }
+    </style>
+</head>
+<body>
+        <div class="sidebar">
+        <div class="logo">
+            <h2>奇蹟77</h2>
+            <p>AWS 專題展示</p>
+        </div>
+        <a href="index.html">🏠 專案首頁 (Portal)</a>
+        <a href="map.html">📍 科技執法地圖</a>
+        <a href="analytics.html">📊 開單熱區分析</a>
+        <a href="architecture.html">⚙️ AWS 架構說明</a>
+        <a href="poc.html">🧪 POC 概念驗證</a>
+        <a href="budget.html">💰 預算經費評估</a>
+        <a href="log.html" class="active">📝 專題工作紀錄</a>
+    </div>
+
+    <div class="main-content">
+        <div class="header-top">
+            <h1>📝 每週專題工作紀錄 (Work Log)</h1>
+        </div>
+
+        <div class="card">
+            <h3>專案進度追蹤</h3>
+            
+            <div style="margin-top: 20px;">
+                <!-- Week 1 Log -->
+                <div class="timeline-item">
+                    <div class="timeline-date">第一週：2026/09/21</div>
+                    <div class="timeline-content">
+                        <strong>完成事項：</strong>
+                        <ul>
+                            <li>團隊確立組名為「奇蹟77」。</li>
+                            <li>經過多次討論，捨棄資料取得不易的題目，確立專題主題為「全台科技執法點位與測速查詢平台」。</li>
+                            <li>完成專題入口網站 (Portal) 的 UI/UX 設計與多頁面架構，並針對頁面版面進行優化排版。</li>
+                            <li>進行競品分析：確立與「神盾」App 的市場區隔，將核心功能聚焦於「事前點位條件查詢」與「大數據視覺化」。</li>
+                            <li>完成首頁內容擴充，新增「系統即時運作流程」與「預期效益」說明。</li>
+                            <li>確立符合 50 美金預算內的「全面 AWS Serverless」整合策略 (S3 靜態託管, API Gateway, Lambda, DynamoDB, Location Service)。</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Week 2 Placeholder -->
+                <div class="timeline-item timeline-placeholder">
+                    <div class="timeline-date">第二週：預定 2026/09/28</div>
+                    <div class="timeline-content">
+                        <strong>本週目標 (待執行)：</strong>
+                        <ul>
+                            <li>收集警政署科技執法 CSV 開放資料。</li>
+                            <li>完成 AWS DynamoDB 資料表建立，並匯入初步的經緯度點位資料。</li>
+                            <li>【請於下週更新此處紀錄】</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Week 3 Placeholder -->
+                <div class="timeline-item timeline-placeholder">
+                    <div class="timeline-date">第三週：預定 2026/10/05</div>
+                    <div class="timeline-content">
+                        <strong>本週目標 (待執行)：</strong>
+                        <ul>
+                            <li>著手整合 Amazon Location Service 地圖前端顯示。</li>
+                            <li>撰寫 AWS Lambda API，測試從前端查詢範圍內的測速照相點。</li>
+                            <li>【請於未來更新此處紀錄】</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Week 4 Placeholder -->
+                <div class="timeline-item timeline-placeholder">
+                    <div class="timeline-date">第四週：預定 2026/10/12 (期中進度檢核)</div>
+                    <div class="timeline-content">
+                        <strong>本週目標 (待執行)：</strong>
+                        <ul>
+                            <li>系統原型測試與期中報告簡報製作。</li>
+                            <li>確保入口網站與核心地圖功能可進行現場 Demo。</li>
+                            <li>【請於未來更新此處紀錄】</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

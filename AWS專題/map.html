@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>科技執法地圖 - 奇蹟77</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <div class="sidebar">
+        <div class="logo">
+            <h2>奇蹟77</h2>
+            <p>AWS 專題展示</p>
+        </div>
+        <a href="index.html">🏠 專案首頁 (Portal)</a>
+        <a href="map.html" class="active">📍 科技執法地圖</a>
+        <a href="analytics.html">📊 開單熱區分析</a>
+        <a href="architecture.html">⚙️ AWS 架構說明</a>
+        <a href="poc.html">🧪 POC 概念驗證</a>
+        <a href="budget.html">💰 預算經費評估</a>
+        <a href="log.html">📝 專題工作紀錄</a>
+    </div>
+
+    <div class="main-content">
+        <div class="header-top">
+            <h1>📍 全台科技執法點位互動查詢地圖 (Map Query)</h1>
+        </div>
+
+        <div class="grid-2" style="grid-template-columns: 3fr 1fr;">
+            <!-- Map Area Placeholder -->
+            <div class="card" style="padding: 0; overflow: hidden;">
+                <div class="data-placeholder" style="height: 600px; border: none; border-radius: 0; flex-direction: column;">
+                    <span style="font-size: 40px; margin-bottom: 20px;">🗺️</span>
+                    <h3>【資料串接區暫停】</h3>
+                    <p style="max-width: 400px; line-height: 1.8;">此區域保留給 Amazon Location Service 或是 Google Maps API 的地圖渲染。<br><br>後續將在這裡實作：<br>1. 依照使用者的查詢條件，從 AWS 抓取執法點位。<br>2. 將查詢結果以圖釘 (Marker) 打在圖上。<br>3. 支援點擊圖釘顯示詳細的執法項目與速限資訊。</p>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="card">
+                <h3>點位查詢過濾器</h3>
+                <div style="margin-bottom: 15px;">
+                    <label style="font-size: 0.9rem; color: #666;">選擇縣市：</label>
+                    <select style="width:100%; padding: 8px; margin-top:5px; border: 1px solid #ccc; border-radius: 4px;">
+                        <option>台北市</option>
+                        <option>新北市</option>
+                        <option>台中市</option>
+                        <option>高雄市</option>
+                        <option>全台所有縣市</option>
+                    </select>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <label style="font-size: 0.9rem; color: #666;">取締類型：</label>
+                    <select style="width:100%; padding: 8px; margin-top:5px; border: 1px solid #ccc; border-radius: 4px;">
+                        <option>全部顯示</option>
+                        <option>固定式測速照相</option>
+                        <option>路口多功能科技執法</option>
+                        <option>區間測速</option>
+                        <option>違規停車自動取締</option>
+                    </select>
+                </div>
+                
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #002147;">
+                    <strong style="color: #002147;">ℹ️ 查詢結果狀態：</strong>
+                    <p style="font-size: 0.9rem; margin: 10px 0 0 0;">目前顯示「台北市」共 <span style="font-weight: bold; color: #d90429;">324</span> 個科技執法點位。</p>
+                </div>
+
+                <button class="btn btn-primary" style="width: 100%; margin-bottom: 10px;">🔍 執行條件查詢 (呼叫 API)</button>
+                <button class="btn" style="width: 100%; background-color: #6c757d;">📍 顯示我附近的相機 (次要預警)</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
